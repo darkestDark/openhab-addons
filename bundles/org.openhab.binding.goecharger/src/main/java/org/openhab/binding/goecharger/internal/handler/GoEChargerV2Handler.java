@@ -202,6 +202,11 @@ public class GoEChargerV2Handler extends GoEChargerBaseHandler {
                     return UnDefType.UNDEF;
                 }
                 return new DecimalType(goeResponse.forceState.toString());
+            case LOGIC_MODE:
+                if (goeResponse.forceState == null) {
+                    return UnDefType.UNDEF;
+                }
+                return new DecimalType(goeResponse.logicmode.toString());
         }
         return UnDefType.UNDEF;
     }
@@ -270,6 +275,12 @@ public class GoEChargerV2Handler extends GoEChargerBaseHandler {
                 break;
             case TRANSACTION:
                 key = TRX;
+                if (command instanceof DecimalType decimalCommand) {
+                    value = String.valueOf(decimalCommand.intValue());
+                }
+                break;
+            case LOGIC_MODE:
+                key = LMO;
                 if (command instanceof DecimalType decimalCommand) {
                     value = String.valueOf(decimalCommand.intValue());
                 }
