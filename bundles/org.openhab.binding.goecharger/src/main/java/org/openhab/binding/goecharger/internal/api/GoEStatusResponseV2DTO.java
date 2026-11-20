@@ -54,4 +54,7 @@ public class GoEStatusResponseV2DTO extends GoEStatusResponseBaseDTO {
 
     @SerializedName(AWP)
     public Double awattarMaxPrice;
+
+    @SerializedName(LMO)
+    public Integer logicmode;
 }
