@@ -62,6 +62,7 @@ Currently available channels are:
 | accessConfiguration      | String                   | Access configuration, for example OPEN, RFID ...              | 1 (r/w)          |
 | forceState               | Number                   | Force state  (Neutral=0, Off=1, On=2)                         | 2 (r/w)          |
 | awattarMaxPrice          | Number                   | Awattar Max Price in ct                                       | 2 (r/w)          |
+| logicmode               | Number                   | Logic Mode    (Default=3, Awattar=4, NextTrip=5)                       | 2 (r/w)          |
 
 ## Full Example
 
@@ -99,6 +100,7 @@ Number:Temperature         GoEChargerTemperatureType2Port       "Temperature typ
 Number:Temperature         GoEChargerTemperatureCircuitBoard    "Temperature circuit board"             {channel="goecharger:goe:garage:temperature"}
 String                     GoEChargerFirmware                   "Firmware"                              {channel="goecharger:goe:garage:firmware"}
 String                     GoEChargerAccessConfiguration        "Access configuration"                  {channel="goecharger:goe:garage:accessConfiguration"}
+Number                     GoEChargerLogicMode                  "Logic Mode"                            {channel="goecharger:goe:garage:logicmode"}
 ```
 
 ## Setting charge current of go-e Charger based on photovoltaik output
