@@ -203,7 +203,7 @@ public class GoEChargerV2Handler extends GoEChargerBaseHandler {
                 }
                 return new DecimalType(goeResponse.forceState.toString());
             case LOGIC_MODE:
-                if (goeResponse.forceState == null) {
+                if (goeResponse.logicmode == null) {
                     return UnDefType.UNDEF;
                 }
                 return new DecimalType(goeResponse.logicmode.toString());
